@@ -18,13 +18,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_18_170454) do
     t.bigint "node_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["node_id"], name: "index_birds_on_node_id"
   end
 
   create_table "nodes", force: :cascade do |t|
+    t.bigint "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "parent_id"
-    t.bigint "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
+    t.index ["parent_id"], name: "index_nodes_on_parent_id"
   end
 
 end

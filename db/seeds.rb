@@ -1,9 +1,9 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# This is not optimized, it's just a convenience for experimenting with the app.
+
+require 'csv'
+
+node_data = File.read(Rails.root.join('db','./nodes.csv'))
+csv = CSV.parse(node_data, :headers => true)
+csv.each do |row|
+  Node.create(id: row["id"], parent_id: row["parent_id"])
+end

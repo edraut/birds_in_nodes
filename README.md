@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## To get started
+As noted in the Gemfile, this app was built with Ruby 3.3 and Rails 7.1
 
-Things you may want to cover:
+### The following will get the dependencies and load the example csv into the database.
 
-* Ruby version
+> bundle  
+> rails db:create  
+> rails db:schema:load  
+> rails db:seed  
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Testing
+> rails test
