@@ -1,0 +1,31 @@
+# node1
+# |
+#  - node2
+# |  |
+# |   - node4
+# |  |
+# |   - node5
+# |    |
+# |     . bird1
+# |     . bird2
+# |     - node6
+# |     |
+# |      . bird3
+#  - node3
+#  |
+#   . bird5
+#
+# node7
+#  . bird4
+#  - node8
+
+bird1:
+  node: :node5
+bird2:
+  node: :node5
+bird3:
+  node: :node6
+bird4:
+  node: :node7
+bird5:
+  node: :node3

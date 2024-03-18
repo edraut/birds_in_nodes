@@ -1,0 +1,31 @@
+# node1
+# |
+#  - node2
+# |  |
+# |   - node4
+# |  |
+# |   - node5
+# |    |
+# |     - node6
+# |
+#  - node3
+#
+# node7
+#  - node8
+
+node1:
+  parent_id: nil
+node2:
+  parent: node1
+node3:
+  parent: node1
+node4:
+  parent: node2
+node5:
+  parent: node2
+node6:
+  parent: node5
+node7:
+  parent_id: nil
+node8:
+  parent: node7
